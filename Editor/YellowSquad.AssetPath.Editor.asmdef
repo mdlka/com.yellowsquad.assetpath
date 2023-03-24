@@ -1,0 +1,18 @@
+{
+    "name": "YellowSquad.AssetPath.Editor",
+    "rootNamespace": "YellowSquad.AssetPath.Editor",
+    "references": [
+        "GUID:763839ec1c5c97d419d2b9a1111400bf"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

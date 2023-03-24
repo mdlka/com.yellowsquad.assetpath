@@ -1,0 +1,13 @@
+{
+    "name": "com.yellowsquad.assetpath",
+    "version": "1.0.0",
+    "displayName": "Asset Path",
+    "unity": "2021.3",
+    "description": "AssetPath provides an AssetPathAttribute. This attribute is used to allow you to drag and drop references to assets in the inspector, but really use string paths for serialization.",
+    "samples": [
+      {
+        "displayName": "Examples",
+        "path": "Samples~"
+      }
+    ]
+  }
