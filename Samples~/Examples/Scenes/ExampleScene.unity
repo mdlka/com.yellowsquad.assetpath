@@ -289,6 +289,10 @@ MonoBehaviour:
     _name: ExampleScene
     _path: Packages/com.yellowsquad.assetpath/Samples/Examples/Scenes/ExampleScene.unity
     _buildIndex: -1
+  _icons:
+  - 
+  - 
+  - 
 --- !u!4 &1631555999
 Transform:
   m_ObjectHideFlags: 0

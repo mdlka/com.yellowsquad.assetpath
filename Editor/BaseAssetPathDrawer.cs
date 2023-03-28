@@ -55,6 +55,7 @@ internal abstract class BaseAssetPathDrawer : PropertyDrawer
         }
 
         EditorGUI.BeginChangeCheck();
+        position.height = EditorGUIUtility.singleLineHeight;
         propertyValue = EditorGUI.ObjectField(position, label, propertyValue, objectType, false);
         
         if (EditorGUI.EndChangeCheck())

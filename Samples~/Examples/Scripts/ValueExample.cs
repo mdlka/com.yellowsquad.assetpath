@@ -8,5 +8,7 @@ namespace YellowSquad.AssetPath.Samples.Examples
         [AssetPath(typeof(Transform))] [SerializeField] private string _playerSpawn;
         [AssetPath(typeof(AudioSource))] [SerializeField] private string _playerAudioSource;
         [SerializeField] private SceneReference _scene;
+
+        [AssetPath(typeof(Sprite))] [SerializeField] private string[] _icons;
     }
 }
