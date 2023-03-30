@@ -2,7 +2,7 @@
 
 This package provides an AssetPathAttribute. This attribute is used to allow you to drag and drop references to assets in the inspector, but really use string paths for serialization.
 
-This is a publishing repo. All basic information is in the [Development Repo](https://github.com/mdlka/AssetPathAttribute).
+This is a publishing repo. All basic information is in the [Development Repo](https://github.com/mdlka/UnityAssetPath).
 
 ## How import
 Make sure you have standalone Git installed first. Reboot after installation.  
