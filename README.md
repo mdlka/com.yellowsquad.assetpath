@@ -17,15 +17,37 @@ To update the package, simply add it again while using a different version tag.
 public class Example : MonoBehavior
 {
     [SerializeField, AssetPath(typeof(GameObject))] private string _templateResourcePath;
-    [SerializeField] private SceneReference _scene;
 
     private void Awake()
     {
         GameObject template = Resources<GameObject>.Load(new ResourcesPath(_templateResourcePath).Value());
-        string sceneName = _scene.Name;
     }
 }
  ```
+
+### Limitations
+
+Scenes do not have runtime asset references.
+There are 2 solutions to this problem:
+1. Use conditional compilation
+
+ ```csharp
+public class Example : MonoBehavior
+{
+#if UNITY_EDITOR
+    [AssetPath(typeof(SceneAsset))]
+#endif
+    [SerializeField] private string _scenePath;
+
+    private void Awake()
+    {
+        int sceneBuildIndex = SceneUtility.GetBuildIndexByScenePath(_scenePath);
+    }
+}
+ ```
+
+2. Use a package that is designed to use scenes. For example: [Eflatun.SceneReference](https://github.com/starikcetin/Eflatun.SceneReference)
+
 
 ### Similar Projects
 
