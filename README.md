@@ -11,7 +11,7 @@ See minimum required Unity version in the package.json file.
 Find "Samples" in the package window and click the "Import" button. Use it as a guide.  
 To update the package, simply add it again while using a different version tag.  
 
-### Usage example
+## Usage example
 
  ```csharp
 public class Example : MonoBehavior
@@ -25,17 +25,17 @@ public class Example : MonoBehavior
 }
  ```
 
- ### Features
+ ## Features
  
 - In the inspector, the field is drawn as an object reference.
 - Method for easy loading from resources.
 - Paths are updated during build (guaranteed by the ISerializationCallbackReceiver).
 
-### Limitations
+## Limitations
 
-Scenes do not have runtime asset references. Therefore they are not supported by this package.
+Scenes do not have runtime asset references. Therefore they are not supported by this package.  
 If you need a reference to a scene asset, use the package provided for that. For example: [Eflatun.SceneReference](https://github.com/starikcetin/Eflatun.SceneReference)
 
-### Similar Projects
+## Similar Projects
 
 This project is inspired by [AssetPathAttribute](https://github.com/ByronMayne/AssetPathAttribute)
