@@ -1,12 +1,12 @@
 # com.yellowsquad.assetpath
 
-Unity package. Provides an attribute for serializing an asset reference into a string path to the asset.
+Unity package. Provides a class for serializing an asset reference into an asset path.
 
 ## How import
 Make sure you have standalone Git installed first. Reboot after installation.  
 In Unity, open "Window" -> "Package Manager".  
 Click the "+" sign on top left corner -> "Add package from git URL..."  
-Paste this: https://github.com/mdlka/com.yellowsquad.assetpath.git#1.0.1  
+Paste this: https://github.com/mdlka/com.yellowsquad.assetpath.git#2.0.0  
 See minimum required Unity version in the package.json file.  
 Find "Samples" in the package window and click the "Import" button. Use it as a guide.  
 To update the package, simply add it again while using a different version tag.  
@@ -16,38 +16,25 @@ To update the package, simply add it again while using a different version tag.
  ```csharp
 public class Example : MonoBehavior
 {
-    [SerializeField, AssetPath(typeof(GameObject))] private string _templateResourcePath;
+    [SerializeField] private ResourcesReference<GameObject> _templateResourcePath;
 
     private void Awake()
     {
-        GameObject template = Resources<GameObject>.Load(new ResourcesPath(_templateResourcePath).Value());
+        GameObject template = _templateResourcePath.Load();
     }
 }
  ```
+
+ ### Features
+ 
+- In the inspector, the field is drawn as an object reference.
+- Method for easy loading from resources.
+- Paths are updated during build (guaranteed by the ISerializationCallbackReceiver).
 
 ### Limitations
 
-Scenes do not have runtime asset references.
-There are 2 solutions to this problem:
-1. Use conditional compilation
-
- ```csharp
-public class Example : MonoBehavior
-{
-#if UNITY_EDITOR
-    [AssetPath(typeof(SceneAsset))]
-#endif
-    [SerializeField] private string _scenePath;
-
-    private void Awake()
-    {
-        int sceneBuildIndex = SceneUtility.GetBuildIndexByScenePath(_scenePath);
-    }
-}
- ```
-
-2. Use a package that is designed to use scenes. For example: [Eflatun.SceneReference](https://github.com/starikcetin/Eflatun.SceneReference)
-
+Scenes do not have runtime asset references. Therefore they are not supported by this package.
+If you need a reference to a scene asset, use the package provided for that. For example: [Eflatun.SceneReference](https://github.com/starikcetin/Eflatun.SceneReference)
 
 ### Similar Projects
 

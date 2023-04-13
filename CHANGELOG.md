@@ -14,9 +14,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 ### Removed
-- `SceneReference` class because this is a counter-intuitive use of package. For scenes, there are better solutions.
 
 ### Fixed
+
+
+
+## [2.0.0] - 2023-04-14
+
+### Breaking Changes
+- A generic class is now used instead of an attribute.
+
+### Added
+- Generic `ResourcesReference` class that can be applied to all classes that inherit UnityEngine.Object.
+- Implementation of `ISerializationCallbackReceiver` to update paths before build.
+
+### Removed
+- `SceneReference` class because for scenes, there are better solutions.
+- `AssetTypeAttribute`.
 
 
 

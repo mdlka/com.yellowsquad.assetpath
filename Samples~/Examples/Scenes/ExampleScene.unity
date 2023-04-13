@@ -123,6 +123,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1028742834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1028742836}
+  - component: {fileID: 1028742835}
+  m_Layer: 0
+  m_Name: ExampleObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1028742835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028742834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6dabb1a466406a893a391b4a42f5d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameObjectPath:
+    _guid: 295b377f1e2682f48bc2951e798f07d0
+    _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/GameObject.prefab
+  _audioSources:
+    _audioSourcePath:
+      _guid: 357cbac71a7b5794c90ac659af672147
+      _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
+    _audioSourcePathArray:
+    - _guid: 357cbac71a7b5794c90ac659af672147
+      _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
+    - _guid: 357cbac71a7b5794c90ac659af672147
+      _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
+    - _guid: 357cbac71a7b5794c90ac659af672147
+      _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
+    _audioSourcePathList:
+    - _guid: 357cbac71a7b5794c90ac659af672147
+      _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
+    - _guid: 357cbac71a7b5794c90ac659af672147
+      _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
+    - _guid: 357cbac71a7b5794c90ac659af672147
+      _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
+--- !u!4 &1028742836
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028742834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1222032786
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +272,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1631555995
+--- !u!1 &2076531046
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,96 +280,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1631555999}
-  - component: {fileID: 1631555998}
-  - component: {fileID: 1631555997}
-  - component: {fileID: 1631555996}
+  - component: {fileID: 2076531048}
+  - component: {fileID: 2076531047}
   m_Layer: 0
-  m_Name: Example
+  m_Name: InheritedExampleObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1631555996
+--- !u!114 &2076531047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631555995}
+  m_GameObject: {fileID: 2076531046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bf785f01ae0e4447bb1c9751cd51563, type: 3}
+  m_Script: {fileID: 11500000, guid: a990a51b72ae4acaa25999cfea5b4285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectValue: {fileID: 0}
-  _gameObjectValue: {fileID: 0}
-  _audioClipValue: {fileID: 0}
-  _scriptableObject: {fileID: 0}
-  _texture2D: {fileID: 0}
-  _animator: {fileID: 0}
-  _audioSource: {fileID: 0}
-  _transform: {fileID: 0}
-  _image: {fileID: 0}
---- !u!114 &1631555997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631555995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 621e0161ec197f94fa170d3a08d07a8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objectValue: Packages/com.yellowsquad.assetpath/Samples/Examples/Prefabs/Player.prefab
-  _gameObjectValue: Packages/com.yellowsquad.assetpath/Samples/Examples/Prefabs/Player.prefab
-  _audioClipValue: 
-  _scriptableObject: 
-  _texture2D: 
-  _animator: 
-  _audioSource: Packages/com.yellowsquad.assetpath/Samples/Examples/Prefabs/Player
-    Audio.prefab
-  _transform: Packages/com.yellowsquad.assetpath/Samples/Examples/Prefabs/Player.prefab
-  _image: 
-  _playerPrefab: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/Player.prefab
---- !u!114 &1631555998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631555995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d5ce2e2b75235944ad59b706d46889a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerPrefab: Packages/com.yellowsquad.assetpath/Samples/Examples/Prefabs/Player.prefab
-  _playerSpawn: Packages/com.yellowsquad.assetpath/Samples/Examples/Prefabs/Player.prefab
-  _playerAudioSource: 
-  _scene:
-    _name: ExampleScene
-    _path: Packages/com.yellowsquad.assetpath/Samples/Examples/Scenes/ExampleScene.unity
-    _buildIndex: -1
-  _icons:
-  - 
-  - 
-  - 
---- !u!4 &1631555999
+  _gameObjectPath:
+    _guid: 
+    _projectPath: 
+  _audioSources:
+    _audioSourcePath:
+      _guid: 
+      _projectPath: 
+    _audioSourcePathArray: []
+    _audioSourcePathList: []
+  _rigidbodyPath:
+    _guid: 61bdb2fb6b1731d4ca40b553adbe1827
+    _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/Rigidbody.prefab
+--- !u!4 &2076531048
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631555995}
+  m_GameObject: {fileID: 2076531046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

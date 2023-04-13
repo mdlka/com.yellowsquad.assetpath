@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97528e5446f043eeb73ecdddca5948ff, type: 3}
+  m_Name: ScriptableObjectExample
+  m_EditorClassIdentifier: 
+  _gameObjectPath:
+    _guid: 295b377f1e2682f48bc2951e798f07d0
+    _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/GameObject.prefab
+  _rigidbodyPath:
+    _guid: 61bdb2fb6b1731d4ca40b553adbe1827
+    _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/Rigidbody.prefab
+  _audioSourcePath:
+    _guid: 357cbac71a7b5794c90ac659af672147
+    _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
