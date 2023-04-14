@@ -153,25 +153,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameObjectPath:
-    _guid: 295b377f1e2682f48bc2951e798f07d0
+    _objectAsset: {fileID: 1000014174029202, guid: 295b377f1e2682f48bc2951e798f07d0, type: 3}
     _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/GameObject.prefab
   _audioSources:
     _audioSourcePath:
-      _guid: 357cbac71a7b5794c90ac659af672147
+      _objectAsset: {fileID: 82000010489201812, guid: 357cbac71a7b5794c90ac659af672147, type: 3}
       _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
     _audioSourcePathArray:
-    - _guid: 357cbac71a7b5794c90ac659af672147
+    - _objectAsset: {fileID: 82000010489201812, guid: 357cbac71a7b5794c90ac659af672147, type: 3}
       _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
-    - _guid: 357cbac71a7b5794c90ac659af672147
+    - _objectAsset: {fileID: 82000010489201812, guid: 357cbac71a7b5794c90ac659af672147, type: 3}
       _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
-    - _guid: 357cbac71a7b5794c90ac659af672147
+    - _objectAsset: {fileID: 82000010489201812, guid: 357cbac71a7b5794c90ac659af672147, type: 3}
       _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
     _audioSourcePathList:
-    - _guid: 357cbac71a7b5794c90ac659af672147
+    - _objectAsset: {fileID: 82000010489201812, guid: 357cbac71a7b5794c90ac659af672147, type: 3}
       _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
-    - _guid: 357cbac71a7b5794c90ac659af672147
+    - _objectAsset: {fileID: 82000010489201812, guid: 357cbac71a7b5794c90ac659af672147, type: 3}
       _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
-    - _guid: 357cbac71a7b5794c90ac659af672147
+    - _objectAsset: {fileID: 82000010489201812, guid: 357cbac71a7b5794c90ac659af672147, type: 3}
       _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/AudioSource.prefab
 --- !u!4 &1028742836
 Transform:
@@ -302,16 +302,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameObjectPath:
-    _guid: 
+    _objectAsset: {fileID: 0}
     _projectPath: 
   _audioSources:
     _audioSourcePath:
-      _guid: 
+      _objectAsset: {fileID: 0}
       _projectPath: 
     _audioSourcePathArray: []
     _audioSourcePathList: []
   _rigidbodyPath:
-    _guid: 61bdb2fb6b1731d4ca40b553adbe1827
+    _objectAsset: {fileID: 6135818312594372975, guid: 61bdb2fb6b1731d4ca40b553adbe1827, type: 3}
     _projectPath: Packages/com.yellowsquad.assetpath/Samples/Examples/Resources/Rigidbody.prefab
 --- !u!4 &2076531048
 Transform:
