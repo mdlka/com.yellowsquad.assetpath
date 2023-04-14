@@ -19,17 +19,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 
 
+## [2.1.0] - 2023-04-14
+
+### Added
+- `ResourcesPath` property in `ResourceReferenc`e to get path relative to resources folder.
+
+### Changed
+- Object asset is saved instead of object guid.
+- `ResourcesPath` is now internal.
+
+### Fixed
+- Asset reference in field doesn't disappear when asset metafile is deleted.
+
+
+
 ## [2.0.2] - 2023-04-14
 
 ### Removed
-- Resource path caching in `ResourcesReference`
+- Resource path caching in `ResourcesReference`.
 
 
 
 ## [2.0.1] - 2023-04-14
 
 ### Fixed
-- Fix incorrect display of auto-properties
+- Fix incorrect display of auto-properties.
 
 
 
@@ -51,7 +65,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [1.0.1] - 2023-03-28
 
 ### Fixed
-- Fix incorrect display of Sprite in array
+- Fix incorrect display of Sprite in array.
 
 
 
