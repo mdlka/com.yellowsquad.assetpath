@@ -11,16 +11,11 @@ namespace YellowSquad.AssetPath
     [Serializable]
     public sealed class ResourcesReference<T> : ResourcesReference where T : Object
     {
-        private string _resourcesPath;
-        
         private ResourcesReference() { }
         
         public T Load()
         {
-            if (string.IsNullOrEmpty(_resourcesPath))
-                _resourcesPath = new ResourcesPath(ProjectPath).Value();
-            
-            return Resources.Load<T>(_resourcesPath);
+            return Resources.Load<T>(new ResourcesPath(ProjectPath).Value());
         }
     }
     
