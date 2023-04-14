@@ -2,17 +2,17 @@
 
 namespace YellowSquad.AssetPath
 {
-    public class ResourcesPath
+    internal class ResourcesPath
     {
         private const string ResourcesFolderName = "/Resources/";
         private readonly string _projectPath;
 
-        public ResourcesPath(string projectPath)
+        internal ResourcesPath(string projectPath)
         {
             _projectPath = projectPath;
         }
 
-        public string Value()
+        internal string Value()
         {
             if (string.IsNullOrEmpty(_projectPath))
                 throw new NullReferenceException(nameof(_projectPath));

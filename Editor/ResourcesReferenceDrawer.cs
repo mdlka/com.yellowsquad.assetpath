@@ -8,12 +8,12 @@ namespace YellowSquad.AssetPath.Editor
     [CustomPropertyDrawer(typeof(ResourcesReference<>), true)]
     internal class ResourcesReferenceDrawer : PropertyDrawer
     {
-        private SerializedProperty _guidProperty;
+        private SerializedProperty _objectAssetProperty;
         private SerializedProperty _projectPathProperty;
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            _guidProperty = property.FindPropertyRelative("_guid");
+            _objectAssetProperty = property.FindPropertyRelative("_objectAsset");
             _projectPathProperty = property.FindPropertyRelative("_projectPath");
 
             position.height = EditorGUIUtility.singleLineHeight;
@@ -23,37 +23,29 @@ namespace YellowSquad.AssetPath.Editor
         private void DrawObjectReferenceField(Rect position, SerializedProperty property, GUIContent label)
         {
             Type objectType = property.GetValue().GetType().GenericTypeArguments[0];
-            
-            Object propertyValue = null;
-            string assetGuid = _guidProperty.stringValue;
-
-            propertyValue = string.IsNullOrEmpty(assetGuid) ? null : AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(assetGuid), objectType);
+            Object propertyValue = _objectAssetProperty.objectReferenceValue;
 
             EditorGUI.BeginChangeCheck();
             propertyValue = EditorGUI.ObjectField(position, label, propertyValue, objectType, false);
 
             if (EditorGUI.EndChangeCheck())
-                ApplyAssetGuid(propertyValue);
+                ApplyPropertyChange(propertyValue);
         }
         
-        private void ApplyAssetGuid(Object assetObject)
+        private void ApplyPropertyChange(Object objectAsset)
         {
-            string assetGuid = string.Empty;
             string assetProjectPath = string.Empty;
 
-            if (assetObject != null)
+            if (objectAsset != null)
             {
-                string projectPath = AssetDatabase.GetAssetPath(assetObject);
+                string projectPath = AssetDatabase.GetAssetPath(objectAsset);
 
                 if (Resources.Load(new ResourcesPath(projectPath).Value()) != null)
-                {
                     assetProjectPath = projectPath;
-                    assetGuid = AssetDatabase.AssetPathToGUID(assetProjectPath);
-                }
             }
 
-            _guidProperty.stringValue = assetGuid;
             _projectPathProperty.stringValue = assetProjectPath;
+            _objectAssetProperty.objectReferenceValue = objectAsset;
         }
     }
 }

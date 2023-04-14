@@ -15,24 +15,28 @@ namespace YellowSquad.AssetPath
         
         public T Load()
         {
-            return Resources.Load<T>(new ResourcesPath(ProjectPath).Value());
+            return Resources.Load<T>(ResourcesPath);
         }
     }
     
+    [Serializable]
     public class ResourcesReference : ISerializationCallbackReceiver
     {
-        [SerializeField] private string _guid;
+#if UNITY_EDITOR
+        [SerializeField] private Object _objectAsset;
+#endif
         [SerializeField] private string _projectPath;
 
         private protected ResourcesReference() { }
 
-        public bool IsNull => string.IsNullOrEmpty(_guid);
+        public bool IsNull => string.IsNullOrEmpty(_projectPath);
+        public string ResourcesPath => new ResourcesPath(ProjectPath).Value();
         public string ProjectPath
         {
             get
             {
 #if UNITY_EDITOR
-                return AssetDatabase.GUIDToAssetPath(_guid);
+                return AssetDatabase.GetAssetPath(_objectAsset);
 #else
                 return _projectPath;
 #endif
@@ -66,11 +70,11 @@ namespace YellowSquad.AssetPath
 
         private void UpdateProjectPath()
         {
-            if (string.IsNullOrEmpty(_guid))
+            if (_objectAsset == null)
                 return;
 
-            string projectPath = AssetDatabase.GUIDToAssetPath(_guid);
-
+            string projectPath = AssetDatabase.GetAssetPath(_objectAsset);
+            
             if (projectPath.Equals(_projectPath)) 
                 return;
             
