@@ -17,6 +17,11 @@ namespace YellowSquad.AssetPath
         {
             return Resources.Load<T>(ResourcesPath);
         }
+
+        public ResourceRequest LoadAsync()
+        {
+            return Resources.LoadAsync<T>(ResourcesPath);
+        }
     }
     
     [Serializable]
