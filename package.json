@@ -1,6 +1,6 @@
 {
     "name": "com.yellowsquad.assetpath",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "displayName": "Asset Path",
     "unity": "2021.3",
     "description": "Provides a class for serializing an asset reference into an asset path.",

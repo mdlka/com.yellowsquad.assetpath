@@ -19,10 +19,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 
 
+## [2.1.1] - 2023-04-20
+
+### Added
+- `LoadAsync` method to `ResourcesReference`
+
+
+
 ## [2.1.0] - 2023-04-14
 
 ### Added
-- `ResourcesPath` property in `ResourceReferenc`e to get path relative to resources folder.
+- `ResourcesPath` property in `ResourcesReference` to get path relative to resources folder.
 
 ### Changed
 - Object asset is saved instead of object guid.
