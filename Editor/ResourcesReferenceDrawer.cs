@@ -9,11 +9,13 @@ namespace YellowSquad.AssetPath.Editor
     internal class ResourcesReferenceDrawer : PropertyDrawer
     {
         private SerializedProperty _objectAssetProperty;
+        private SerializedProperty _assetNameProperty;
         private SerializedProperty _projectPathProperty;
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             _objectAssetProperty = property.FindPropertyRelative("_objectAsset");
+            _assetNameProperty = property.FindPropertyRelative("_assetName");
             _projectPathProperty = property.FindPropertyRelative("_projectPath");
 
             position.height = EditorGUIUtility.singleLineHeight;
@@ -44,6 +46,7 @@ namespace YellowSquad.AssetPath.Editor
                     assetProjectPath = projectPath;
             }
 
+            _assetNameProperty.stringValue = objectAsset.name;
             _projectPathProperty.stringValue = assetProjectPath;
             _objectAssetProperty.objectReferenceValue = objectAsset;
         }

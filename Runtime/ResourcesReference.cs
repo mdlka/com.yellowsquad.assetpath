@@ -30,12 +30,26 @@ namespace YellowSquad.AssetPath
 #if UNITY_EDITOR
         [SerializeField] private Object _objectAsset;
 #endif
+        [SerializeField] private string _assetName;
         [SerializeField] private string _projectPath;
 
         private protected ResourcesReference() { }
 
         public bool IsNull => string.IsNullOrEmpty(_projectPath);
         public string ResourcesPath => new ResourcesPath(ProjectPath).Value();
+
+        public string AssetName
+        {
+            get
+            {
+#if UNITY_EDITOR
+                return _objectAsset.name;
+#else
+                return _assetName;
+#endif
+            }
+        }
+        
         public string ProjectPath
         {
             get
@@ -82,9 +96,10 @@ namespace YellowSquad.AssetPath
             
             if (projectPath.Equals(_projectPath)) 
                 return;
-            
+
+            _assetName = _objectAsset.name;
             _projectPath = projectPath;
-            
+
             if (Application.isPlaying == false)
                 EditorSceneManager.MarkAllScenesDirty();
         }
